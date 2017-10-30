@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Нуриль Барадусов](https://up.htmlacademy.ru/htmlcss/19/user/152703).
-* Наставник: `Неизвестно`.
+* Наставник: [Владислав Балабанович](https://htmlacademy.ru/profile/balabanovich).
 
 ---
 
