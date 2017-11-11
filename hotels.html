@@ -12,87 +12,100 @@
 
     <header class="main-header">
 
-      <h1 class="visually-hidden">«Седона» - поиск гостиниц в городе Седона</h1>
+      <h1 class="visually-hidden">Поиск гостиниц в городе Седона</h1>
 
       <nav class="main-navigation">
         <ul class="site-navigation">
           <li><a href="info.html">Информация</a></li>
           <li><a href="media.html">Фото и видео</a></li>
           <li><a href="map.html">Карта штата</a></li>
-          <li><a class="nav-link-active" href="hotels.html">Гостиницы</a></li>
+          <li><a class="nav-link-active">Гостиницы</a></li>
         </ul>
-        <div class="main-header-logo">
-          <a href="index.html">
-            <img src="img/main-logo.png" width="138" height="70" alt="«Седона» - поиск гостиниц в городе Седона">
-          </a>
-        </div>
       </nav>
+
+      <div class="main-header-logo">
+        <a href="index.html">
+          <img src="img/main-logo.png" width="138" height="70" alt="«Седона» - поиск гостиниц в городе Седона">
+        </a>
+      </div>
 
     </header>
 
     <section class="search-filters">
-      <h2 class="visually-hidden">Поиск гостиниц</h2>
-      <form class="search-filters-form">
-        <div class="search-form-item">
-          <h3>Инфраструктура:</h3>
-          <div class="search-form-checkbox">
-            <input type="checkbox" name="pool" id="pool-field">
-            <label for="pool-field">Бассейн</label>
-          </div>
-          <div class="search-form-checkbox">
-            <input type="checkbox" name="parking" id="parking-field">
-            <label for="parking-field">Парковка</label>
-          </div>
-          <div class="search-form-checkbox">
-            <input type="checkbox" name="wifi" id="wifi-field">
-            <label for="wifi-field">Wi-Fi</label>
-          </div>
-        </div>
-        <div class="search-form-item">
-          <h3>Тип жилья:</h3>
-          <div class="search-form-checkbox">
-            <input type="checkbox" name="hotel" id="hotel-field">
-            <label for="hotel-field">Гостиница</label>
-          </div>
-          <div class="search-form-checkbox">
-            <input type="checkbox" name="motel" id="motel-field">
-            <label for="motel-field">Мотель</label>
-          </div>
-          <div class="search-form-checkbox">
-            <input type="checkbox" name="apartment" id="apartment-field">
-            <label for="apartment-field">Апартаменты</label>
-          </div>
-        </div>
-        <div class="search-form-item">
-          <h3>Стоимость в сутки (Р):</h3>
-          <p>От 0</p>
-          <p>До 3000</p>
-          <span>Слайдер</span>
-          <button>Показать</button>
-        </div>
+      <h2 class="visually-hidden">Фильтр поиска гостиниц</h2>
+      <form class="search-filters-form" method="get" action="https://echo.htmlacademy.ru">
+        <fieldset class="search-form-item">
+          <legend>Инфраструктура:</legend>
+          <ul>
+            <li class="search-form-option">
+              <input class="visually-hidden search-filter-input search-filter-checkbox" id="pool-field" type="checkbox" name="pool" checked>
+              <label for="pool-field">Бассейн</label>
+            </li>
+            <li class="search-form-option">
+              <input class="visually-hidden search-filter-input search-filter-checkbox" id="parking-field" type="checkbox" name="parking">
+              <label for="parking-field">Парковка</label>
+            </li>
+            <li class="search-form-option">
+              <input class="visually-hidden search-filter-input search-filter-checkbox" id="wifi-field" type="checkbox" name="wifi">
+              <label for="wifi-field">Wi-Fi</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="search-form-item">
+          <legend>Тип жилья:</legend>
+          <ul>
+            <li class="search-form-option">
+              <input class="visually-hidden search-filter-input search-filter-checkbox" id="hotel-field" type="checkbox" name="hotel" checked>
+              <label for="hotel-field">Гостиница</label>
+            </li>
+            <li class="search-form-option">
+              <input class="visually-hidden search-filter-input search-filter-checkbox" id="motel-field" type="checkbox" name="motel" checked>
+              <label for="motel-field">Мотель</label>
+            </li>
+            <li class="search-form-option">
+              <input class="visually-hidden search-filter-input search-filter-checkbox" id="apartment-field" type="checkbox" name="apartment" checked>
+              <label for="apartment-field">Апартаменты</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="search-form-item">
+          <legend>Стоимость в сутки (&#8381;):</legend>
+          <label class="visually-hidden" for="min-price">Стоимость от</label>
+          <input id="min-price" type="text" name="min-price" value="От 0" placeholder="">
+
+          <label class="visually-hidden" for="max-price">Стоимость до</label>
+          <input id="max-price" type="text" name="max-price" value="До 3000" placeholder="">
+
+          <input type="range" min="0" max="4000" step="10">
+          <!-- <div class="price-range-slider">
+            <div class="slider-handle-line"></div>
+            <span class="slider-handle"></span>
+            <span class="slider-handle"></span>
+          </div> -->
+        </fieldset>
+        <button class="search-filters-btn" type="submit">Показать</button>
       </form>
     </section>
 
     <section class="search-results">
       <div class="sorter-panel">
-        <h2>Надено: 3</h2>
+        <h2>Надено: <span class="found-number">3</span></h2>
         <div class="sorter">
-          <div class="sorter-label">Сортировка</div>
-          <a class="sorter-link sorter-link-active" href="#">По цене</a>
-          <a class="sorter-link" href="#">По типу</a>
-          <a class="sorter-link" href="#">По рейтингу</a>
+          <span class="sorter-label">Сортировка</span>
+          <button class="sorter-btn sorter-btn-active" type="button" disabled>По цене</button>
+          <button class="sorter-btn" type="button">По типу</button>
+          <button class="sorter-btn" type="button">По рейтингу</button>
         </div>
         <div class="sorter-direction">
           <!-- Направление сортировки -->
-          <a class="sorter-switch sorter-switch-active" href="#">По возрастанию</a>
-          <a class="sorter-switch" href="#">По убыванию</a>
+          <button class="sorter-switch sorter-switch-active" type="button" disabled>По возрастанию</button>
+          <button class="sorter-switch" type="button">По убыванию</button>
         </div>
       </div>
 
       <section class="result-list">
 
         <ul>
-
           <li class="result-item">
             <a href="#"><img src="img/amara-resort.jpg" width="135" height="90" alt="Гостиница Amara Resort &amp; Spa"></a>
             <div class="result-item-description">
@@ -119,7 +132,7 @@
           </li>
 
           <li class="result-item">
-            <a href=""><img src="img/desert-quail.jpg" width="135" height="90" alt="Мотель Desert Quail Inn"></a>
+            <a href="#"><img src="img/desert-quail.jpg" width="135" height="90" alt="Мотель Desert Quail Inn"></a>
             <div class="result-item-description">
               <h3>Desert Quail Inn</h3>
               <div>
@@ -143,7 +156,7 @@
           </li>
 
           <li class="result-item">
-            <a href=""><img src="img/villas-at-poco.jpg" width="135" height="90"  alt="Апартаменты Villas at Poco Diablo"></a>
+            <a href="#"><img src="img/villas-at-poco.jpg" width="135" height="90"  alt="Апартаменты Villas at Poco Diablo"></a>
             <div class="result-item-description">
               <h3>Villas at Poco Diablo</h3>
               <div>
@@ -164,7 +177,6 @@
               <p class="result-item-rating">Рейтинг: 9,2</p>
             </div>
           </li>
-
         </ul>
 
       </section>
@@ -177,16 +189,16 @@
 
       <div class="footer-social">
         <ul>
-          <li><a href="#" class="social-button social-button-tw">Твиттер</a></li>
-          <li><a href="#" class="social-button social-button-fb">Фэйсбук</a></li>
-          <li><a href="#" class="social-button social-button-yt">Ютьюб</a></li>
+          <li><a class="social-btn social-btn-tw" href="#"><span class="visually-hidden">Твиттер</span></a></li>
+          <li><a class="social-btn social-btn-fb" href="#"><span class="visually-hidden">Фэйсбук</span></a></li>
+          <li><a class="social-btn social-btn-yt" href="#"><span class="visually-hidden">Ютьюб</span></a></li>
         </ul>
       </div>
 
       <div class="footer-copyright">
         <b>Website by</b>
-        <a href="https://htmlacademy.ru/intensive/htmlcss" class="main-footer-logo">
-          <img src="img/logo-htmlacademy.svg" width="115" height="41"  alt="HTML Academy">
+        <a class="main-footer-logo" href="https://htmlacademy.ru/intensive/htmlcss">
+          <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Базовый интенсив HTML Academy">
         </a>
       </div>
 

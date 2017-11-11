@@ -21,10 +21,11 @@
           <li><a href="map.html">Карта штата</a></li>
           <li><a href="hotels.html">Гостиницы</a></li>
         </ul>
-        <div class="main-header-logo">
-          <img src="img/main-logo.png" width="138" height="70" alt="«Седона» - поиск гостиниц в городе Седона">
-        </div>
       </nav>
+
+      <div class="main-header-logo">
+        <img src="img/main-logo.png" width="138" height="70" alt="«Седона» - поиск гостиниц в городе Седона">
+      </div>
 
     </header>
 
@@ -42,7 +43,7 @@
       <section class="feature-item">
         <div class="feature-item-description">
           <h3>Настоящий городок</h3>
-          <span>№1</span>
+          <span>&horbar; №1 &horbar;</span>
           <p>Седона — не аттракцион, для туристов, там течет своя жизнь</p>
         </div>
         <div class="feature-item-img">
@@ -67,8 +68,8 @@
 
       <section class="feature-item">
         <div class="feature-item-description">
-          <h3>Там есть мост дьявола</h3>
-          <span>№2</span>
+          <h3>Там есть<br>мост дьявола</h3>
+          <span>&horbar; №2 &horbar;</span>
           <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
         </div>
         <div class="feature-item-img">
@@ -79,17 +80,17 @@
       <section class="feature-item other-features">
         <div class="other-feature-item">
           <h3>Небольшая площадь</h3>
-          <span>№3</span>
+          <span>&horbar; №3 &horbar;</span>
           <p>Все достопримечательности находятся очень близко</p>
         </div>
         <div class="other-feature-item">
           <h3>Красивая дорога</h3>
-          <span>№4</span>
+          <span>&horbar; №4 &horbar;</span>
           <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </div>
         <div class="other-feature-item">
           <h3>Мало туристов</h3>
-          <span>№5</span>
+          <span>&horbar; №5 &horbar;</span>
           <p>Большинство едет в гранд каньон и толпится там</p>
         </div>
       </section>
@@ -97,25 +98,46 @@
     </section>
 
     <section class="booking">
-      <h2>Заинтересовались?</h2>
-      <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Cедоне</p>
-      <a href="form.html" class="booking-btn">Поиск гостиницы в Седоне</a>
 
-      <section class="modal-form-booking">
-        <!-- <h2 class="visually-hidden">Форма поиска отелей</h2> -->
-        <!-- Будущая форма поиска -->
-        <p>Дата заезда: 24 Апреля 2017</p>
-        <p>Дата выезда:4 июля 2017</p>
-        <p>Взрослые: 2</p>
-        <p>Дети: 0</p>
-        <button>Найти</button>
-      </section>
+      <div class="booking-search">
+        <h2>Заинтересовались?</h2>
+        <p>Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Cедоне</p>
+        <a class="booking-search-btn" href="#">Поиск гостиницы в Седоне</a>
+      </div>
+
+      <div class="modal-form-booking">
+        <h3 class="visually-hidden">Форма поиска отелей</h3>
+        <form class="form-booking" method="get" action="https://echo.htmlacademy.ru">
+          <p class="form-booking-item">
+            <label for="booking-date-in">Дата заезда: </label>
+            <input id="booking-date-in" type="text" name="date-in" value="24 Апреля 2017">
+            <img class="booking-date-picker" src="img/calendar.svg" width="21" height="22" alt="Календарь">
+          </p>
+          <p class="form-booking-item">
+            <label for="booking-date-out">Дата выезда: </label>
+            <input id="booking-date-out" type="text" name="date-out" value="4 июля 2017">
+            <img class="booking-date-picker" src="img/calendar.svg" width="21" height="22" alt="Календарь">
+          </p>
+          <p class="form-booking-item">
+            <label for="booking-adults">Взрослые: </label>
+            <button class="booking-less-btn" type="button" aria-label="Уменьшить количество">—</button>
+            <input id="booking-adults" type="text" name="adults" value="2" placeholder="">
+            <button class="booking-more-btn" type="button" aria-label="Увеличить количество">+</button>
+
+            <label for="booking-kids">Дети: </label>
+            <button class="booking-less-btn" type="button" aria-label="Уменьшить количество">—</button>
+            <input id="booking-kids" type="text" name="kids" value="0" placeholder="">
+            <button class="booking-more-btn" type="button" aria-label="Увеличить количество">+</button>
+          </p>
+          <button class="form-booking-btn" type="submit">Найти</button>
+        </form>
+      </div>
+
     </section>
 
     <section class="map">
-      <!-- <h2 class="visually-hidden">Карта города Седона</h2> -->
-      <!-- Будущая карта -->
-      <img src="img/map.png" width="1200" height="595" alt="Карта города Седона, штат Аризона, США">
+      <h2 class="visually-hidden">Карта города Седона</h2>
+      <img src="img/map.jpg" width="1200" height="595" alt="Карта города Седона, штат Аризона, США">
     </section>
 
     <footer class="main-footer">
@@ -124,16 +146,16 @@
 
       <div class="footer-social">
         <ul>
-          <li><a href="#" class="social-button social-button-tw">Твиттер</a></li>
-          <li><a href="#" class="social-button social-button-fb">Фэйсбук</a></li>
-          <li><a href="#" class="social-button social-button-yt">Ютьюб</a></li>
+          <li><a class="social-btn social-btn-tw" href="#"><span class="visually-hidden">Твиттер</span></a></li>
+          <li><a class="social-btn social-btn-fb" href="#"><span class="visually-hidden">Фэйсбук</span></a></li>
+          <li><a class="social-btn social-btn-yt" href="#"><span class="visually-hidden">Ютьюб</span></a></li>
         </ul>
       </div>
 
       <div class="footer-copyright">
         <b>Website by</b>
-        <a href="https://htmlacademy.ru/intensive/htmlcss" class="main-footer-logo">
-          <img src="img/logo-htmlacademy.svg" width="115" height="41"  alt="HTML Academy">
+        <a class="main-footer-logo" href="https://htmlacademy.ru/intensive/htmlcss">
+          <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Базовый интенсив HTML Academy">
         </a>
       </div>
 
