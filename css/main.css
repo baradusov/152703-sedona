@@ -42,7 +42,10 @@ header {
 }
 
 .container {
-  width: 1200px;
+  position: relative;
+
+  min-width: 768px;
+  max-width: 1200px;
   margin: 0 auto;
 
   background-color: #ffffff;
@@ -62,7 +65,7 @@ img {
 
 .main-navigation {
   display: flex;
-  padding: 15px 72px;
+  padding: 15px 6%;
 
   font-size: 14px;
   font-weight: 700;
@@ -83,7 +86,7 @@ img {
 }
 
 .site-navigation li {
-  width: 240px;
+  width: 20%;
 }
 
 .site-navigation li:first-child,
@@ -131,6 +134,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 76px;
+  padding-bottom: 80px;
 
   background-color: #627a9c;
   background-image: url("../img/bg-mask.png"), url("../img/main-bg.jpg");
@@ -141,8 +146,6 @@ img {
 
 .intro img {
   width: 458px;
-  padding-top: 76px;
-  padding-bottom: 80px;
 }
 
 .features,
@@ -187,7 +190,7 @@ img {
 .feature-item-description {
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 34%;
   height: 100%;
   padding-top: 20px;
 
@@ -200,7 +203,7 @@ img {
 }
 
 .feature-item-img {
-  max-width: 800px;
+  width: 66%;
 }
 
 .feature-img  {
@@ -216,7 +219,7 @@ img {
 }
 
 .offers-item {
-  width: 400px;
+  width: 33%;
   padding: 0 50px;
 }
 
@@ -259,7 +262,7 @@ img {
 .other-feature-item {
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 33%;
   padding: 50px 60px;
 }
 
@@ -405,7 +408,7 @@ img {
 }
 
 .map {
-  height: 473px;
+  height: 593px;
 }
 
 .map img {
@@ -432,7 +435,7 @@ img {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 30px 72px;
+  padding: 30px 6%;
 }
 
 .search-options-wrapper {
@@ -619,7 +622,7 @@ img {
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: 30px;
-  padding: 0 72px;
+  padding: 0 6%;
 }
 
 .sorter {
@@ -700,7 +703,7 @@ img {
 .result-item {
   display: flex;
   justify-content: space-between;
-  padding: 30px 72px;
+  padding: 30px 6%;
 
   border-top: 1px solid #e4e4e4
 }
@@ -812,23 +815,44 @@ img {
 /* FOOTER STYLING */
 
 .main-footer {
+  position: absolute;
+
+  bottom: -5px;
+  right: 0;
+  left: 0;
+
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 120px;
+  width: 100%;
 
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-.main-footer .visitsedona {
+.inner-footer {
+  position: static;
+}
+
+.visitsedona {
+  width: 33%;
+  text-align: center;
+}
+
+.main-footer .visitsedona-link {
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
   color: #000000;
 }
 
+.footer-social {
+  width: 33%;
+}
+
 .footer-social ul {
   display: flex;
+  justify-content: center;
   margin: 0;
   padding: 0;
 
@@ -862,7 +886,9 @@ img {
 
 .footer-copyright {
   display: flex;
+  justify-content: center;
   align-items: center;
+  width: 33%;
 }
 
 .footer-copyright b {
