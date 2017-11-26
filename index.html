@@ -4,12 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <meta name="description" content="Личный проект «Седона» для базового интенсива HTML Academy">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
 </head>
 
 <body>
@@ -19,10 +18,14 @@
 
       <nav class="main-navigation">
         <ul class="site-navigation">
-          <li><a href="info.html">Информация</a></li>
-          <li><a href="media.html">Фото и видео</a></li>
-          <li><a href="map.html">Карта штата</a></li>
-          <li><a href="hotels.html">Гостиницы</a></li>
+          <div class="site-navigation-item">
+            <li><a href="info.html">Информация</a></li>
+            <li><a href="media.html">Фото и видео</a></li>
+          </div>
+          <div class="site-navigation-item">
+            <li><a href="map.html">Карта штата</a></li>
+            <li><a href="hotels.html">Гостиницы</a></li>
+          </div>
         </ul>
       </nav>
 
@@ -36,19 +39,19 @@
     </div>
 
     <section class="features">
-      <section class="feature-item">
-        <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+      <section class="feature-item feature-item-title">
+        <h2>Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</h2>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </section>
 
-      <section class="feature-item">
+      <section class="feature-item feature-item-main">
         <div class="feature-item-description">
-          <h3>Настоящий городок</h3>
+          <h3>Настоящий<br>городок</h3>
           <span>&horbar; №1 &horbar;</span>
-          <p>Седона — не аттракцион, для туристов, там течет своя жизнь</p>
+          <p>Седона — не аттракцион, для туристов,<br>там течет своя жизнь</p>
         </div>
         <div class="feature-item-img">
-          <img src="img/feature-one-img.jpg" width="800" height="400" alt="Седона — настоящий городок">
+          <img class="feature-img" src="img/feature-one-img.jpg" width="800" height="400" alt="Седона — настоящий городок">
         </div>
       </section>
 
@@ -67,14 +70,14 @@
         </div>
       </section>
 
-      <section class="feature-item">
+      <section class="feature-item feature-item-main">
+        <div class="feature-item-img">
+          <img class="feature-img" src="img/feature-two-img.jpg" width="800" height="400" alt="Мост дьявола">
+        </div>
         <div class="feature-item-description">
           <h3>Там есть<br>мост дьявола</h3>
           <span>&horbar; №2 &horbar;</span>
           <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-        </div>
-        <div class="feature-item-img">
-          <img src="img/feature-two-img.jpg" width="800" height="400" alt="Мост дьявола">
         </div>
       </section>
 
@@ -111,13 +114,13 @@
           <div class="form-booking-item booking-item-date">
             <label for="booking-date-in">Дата заезда: </label>
             <input id="booking-date-in" type="text" name="date-in" value="24 Апреля 2017">
-            <span class="booking-date-picker">Календарь</span>
+            <span class="booking-date-picker">К</span>
           </div>
 
           <div class="form-booking-item booking-item-date">
             <label for="booking-date-out">Дата выезда: </label>
             <input id="booking-date-out" type="text" name="date-out" value="4 июля 2017">
-            <span class="booking-date-picker">Календарь</span>
+            <span class="booking-date-picker">К</span>
           </div>
 
           <div class="form-booking-item booking-item-guests">
