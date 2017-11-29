@@ -105,7 +105,6 @@ img {
 
 .site-navigation a.nav-link-active  {
   color: #766357;
-  cursor: pointer;
 }
 
 .site-navigation a:hover,
@@ -115,6 +114,11 @@ img {
 
 .site-navigation a:active {
   color: rgba(129, 179, 210, 0.3);
+}
+
+.site-navigation a.nav-link-active  {
+  color: #766357;
+  cursor: default;
 }
 
 .main-header-logo {
@@ -215,7 +219,8 @@ img {
 
 .offers {
   flex-wrap: wrap;
-  min-height: 330px;
+  padding: 35px 0 60px;
+  /*min-height: 330px;*/
 }
 
 .offers-item {
@@ -354,13 +359,45 @@ img {
   background-color: #ffffff;
 }
 
+.booking-item-date {
+  position: relative;
+}
+
 .booking-item-date input {
+  padding-left: 15px;
+  padding-right: 35px;
+
   width: 346px;
   height: 38px;
 }
 
+.booking-date-picker {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+
+  fill: #cacaca;
+
+  cursor: pointer;
+}
+
+.booking-date-picker:hover,
+.booking-date-picker:focus {
+  fill: #000000;
+}
+
+.booking-date-picker:active {
+  fill: #81b3d2;
+}
+
 .booking-item-guests {
   margin-bottom: 55px;
+}
+
+.booking-adults-wrapper,
+.booking-kids-wrapper {
+  display: flex;
+  align-items: center;
 }
 
 .booking-item-guests input {
@@ -368,6 +405,14 @@ img {
   height: 38px;
 
   text-align: center;
+}
+
+.booking-adults-wrapper label {
+  margin-right: 40px;
+}
+
+.booking-kids-wrapper label {
+  margin-right: 25px;
 }
 
 .booking-item-guests button {
@@ -378,6 +423,8 @@ img {
 
   background-color: #f2f2f2;
   border: none;
+
+  cursor: pointer;
 }
 
 .form-booking-btn {
@@ -433,9 +480,9 @@ img {
 .search-filters-form {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
-  padding: 30px 6%;
+  padding: 30px 6% 5px 6%;
 }
 
 .search-options-wrapper {
@@ -445,11 +492,17 @@ img {
   width: 350px;
 }
 
-.search-filters-form fieldset {
+.search-form-item {
+  margin: 0;
+  padding: 0;
+  min-width: 250px;
+
   border: none;
 }
 
-.search-filters-form legend {
+.search-form-item legend {
+  margin-bottom: 25px;
+
   font-size: 16px;
   font-weight: 700;
   line-height: 21px;
@@ -457,26 +510,46 @@ img {
 }
 
 .search-filters-form ul {
+  margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
+.search-form-option {
+  position: relative;
+
+  margin-bottom: 25px;
+}
+
 .search-form-option label {
+  padding-left: 40px;
+
   color: #ffffff;
   cursor: pointer;
 }
 
-.search-form-option input::before {
+.search-form-option label::before {
   content: "";
 
-  display: flex;
+  position: absolute;
+  left: 0;
 
-  width: 23px;
+  width: 27px;
   height: 23px;
 
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
 }
+
+.search-form-option input[type="checkbox"]:checked + label:before {
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+}
+
+/*.search-form-option input[type="checkbox"]:disabled + label:before {
+  fill: #6a6a6a;
+}*/
 
 .filter-range {
   display: flex;
@@ -575,6 +648,14 @@ img {
   cursor: pointer;
 }
 
+.slider-handle:hover,
+.slider-handle:focus {
+  width: 4px;
+  height: 4px;
+
+  border-width: 9px;
+}
+
 .slider-handle-min {
   left: 0;
 }
@@ -649,12 +730,6 @@ img {
   text-decoration: underline dotted;
 }
 
-.sorter-btn-active{
-  color: #81b3d2;
-  text-decoration: none;
-  cursor: pointer;
-}
-
 .sorter-btn:hover,
 .sorter-btn:focus {
   color: #81b3d2;
@@ -663,6 +738,12 @@ img {
 .sorter-btn:active {
   color: #000000;
   text-decoration: none;
+}
+
+.sorter-btn-active {
+  color: #81b3d2;
+  text-decoration: none;
+  cursor: default;
 }
 
 .sorter-direction {
@@ -703,7 +784,9 @@ img {
 .result-item {
   display: flex;
   justify-content: space-between;
-  padding: 30px 6%;
+  align-items: center;
+  padding: 0 6%;
+  min-height: 150px;
 
   border-top: 1px solid #e4e4e4
 }
@@ -802,12 +885,22 @@ img {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.result-item-rate {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  min-height: 90px;
+}
+
 .result-item-rating {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 110px;
   height: 27px;
+  margin: 0;
+
   color: #666666;
   background-color: #f2f2f2;
 }
@@ -824,7 +917,7 @@ img {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 120px;
+  padding: 35px 0 35px 0;
   width: 100%;
 
   background-color: rgba(255, 255, 255, 0.9);
