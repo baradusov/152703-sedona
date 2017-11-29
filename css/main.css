@@ -274,7 +274,7 @@ img {
 .booking-search {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   min-height: 290px;
 }
@@ -286,12 +286,17 @@ img {
   line-height: 36px;
 }
 
+.booking-search p {
+  margin: 0;
+}
+
 .booking-search-btn {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 568px;
   height: 86px;
+  margin-top: 50px;
 
   font-size: 21px;
   font-weight: 700;
@@ -416,6 +421,8 @@ img {
 }
 
 .booking-item-guests button {
+position: relative;
+
   width: 38px;
   height: 38px;
 
@@ -425,6 +432,59 @@ img {
   border: none;
 
   cursor: pointer;
+}
+
+.booking-less-btn::after {
+  content: "";
+
+  position: absolute;
+  top: 18px;
+  left: 13px;
+
+  width: 12px;
+  height: 3px;
+
+  background-color: #a8a8a8;
+}
+
+.booking-more-btn::after {
+  content: "";
+
+  position: absolute;
+  top: 18px;
+  left: 13px;
+
+  width: 12px;
+  height: 3px;
+
+  background-color: #a8a8a8;
+}
+
+.booking-more-btn::before {
+  content: "";
+
+  position: absolute;
+  top: 18px;
+  left: 13px;
+
+  width: 12px;
+  height: 3px;
+
+  background-color: #a8a8a8;
+  transform: rotate(90deg);
+}
+
+.booking-less-btn:hover::after,
+.booking-less-btn:focus::after,
+.booking-more-btn:hover::after,
+.booking-more-btn:hover::before {
+  background-color: #000000;
+}
+
+.booking-less-btn:active::after,
+.booking-more-btn:active::after,
+.booking-more-btn:active::before {
+  background-color: #7eadd4;
 }
 
 .form-booking-btn {
@@ -546,10 +606,6 @@ img {
   background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
 }
-
-/*.search-form-option input[type="checkbox"]:disabled + label:before {
-  fill: #6a6a6a;
-}*/
 
 .filter-range {
   display: flex;
@@ -770,7 +826,7 @@ img {
 }
 
 .sorter-switch:active path {
-  fill: #81b3d2;;
+  fill: #81b3d2;
 }
 
 .result-list ul {
@@ -788,11 +844,11 @@ img {
   padding: 0 6%;
   min-height: 150px;
 
-  border-top: 1px solid #e4e4e4
+  border-top: 1px solid #e4e4e4;
 }
 
 .result-item:last-child {
-  border-bottom: 1px solid #e4e4e4
+  border-bottom: 1px solid #e4e4e4;
 }
 
 .result-item-wrapper {
