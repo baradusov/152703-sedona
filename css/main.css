@@ -40,10 +40,6 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
-header {
-  position: relative;
-}
-
 .container {
   position: relative;
 
@@ -146,6 +142,8 @@ img {
 /* INDEX STYLING */
 
 .intro {
+  position: relative;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -159,10 +157,25 @@ img {
   padding-bottom: 80px;
 
   background-color: #627a9c;
-  background-image: url("../img/bg-mask.png"), url("../img/main-bg.jpg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: bottom, 50% -80px;
-  background-size: 100% 57px, 100% auto;
+  background-image: url("../img/main-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.intro::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 57px;
+
+  background-image: url("../img/bg-mask.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .intro img {
@@ -193,6 +206,10 @@ img {
           flex-direction: column;
   padding-top: 60px;
   padding-bottom: 55px;
+}
+
+.feature-item-container {
+  width: 50%;
 }
 
 .feature-item-title h2 {
@@ -229,7 +246,7 @@ img {
           flex-direction: column;
   width: 34%;
   height: 100%;
-  padding-top: 20px;
+  padding: 20px 50px;
 
   color: #ffffff;
 }
@@ -635,8 +652,6 @@ img {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   padding: 30px 6% 5px 6%;
 }
 
@@ -644,21 +659,19 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 550px;
+  width: 50%;
 }
 
 .search-form-item {
   margin: 0;
   padding: 0;
-  min-width: 250px;
+  width: 50%;
 
   border: none;
 }
@@ -710,6 +723,11 @@ img {
   background-repeat: no-repeat;
 }
 
+.search-form-option input[type="checkbox"]:disabled + label:before {
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+}
+
 .filter-range {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -718,7 +736,9 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 330px;
+  margin: 0;
+  padding: 0;
+  width: 30%;
 
   font: inherit;
   font-size: 14px;
@@ -726,6 +746,8 @@ img {
   line-height: 21px;
   text-transform: uppercase;
   color: #ffffff;
+
+  border: none;
 }
 
 .filter-range legend {
@@ -779,7 +801,7 @@ img {
 }
 
 .price-controls input {
-  width: 50px;
+  max-width: 50px;
   margin: 0;
 
   color: inherit;
