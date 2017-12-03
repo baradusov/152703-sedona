@@ -137,6 +137,7 @@ img {
   width: 138px;
   height: 70px;
   margin: auto;
+  z-index: 1;
 }
 
 /* INDEX STYLING */
@@ -166,7 +167,7 @@ img {
   content: "";
 
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
 
   width: 100%;
