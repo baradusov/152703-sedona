@@ -64,9 +64,6 @@ img {
 /* NAVIGATION STYLING */
 
 .main-navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding: 15px 6%;
 
   font-size: 14px;
@@ -104,6 +101,14 @@ img {
 .site-navigation li:nth-child(3),
 .site-navigation li:last-child {
   text-align: right;
+}
+
+.site-navigation li:nth-child(2) {
+  margin-right: 60px;
+}
+
+.site-navigation li:nth-child(3) {
+  margin-left: 60px;
 }
 
 .site-navigation a {
@@ -206,7 +211,7 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-top: 60px;
-  padding-bottom: 55px;
+  padding-bottom: 53px;
 }
 
 .feature-item-container {
@@ -245,22 +250,24 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 34%;
+  width: 33.333%;
   height: 100%;
-  padding: 20px 50px;
+  padding: 20px 4%;
 
   color: #ffffff;
 }
 
 .feature-item-description h3{
+  padding: 0 45px;
   color: #ffffff;
 }
 
 .feature-item-img {
-  width: 66%;
+  width: 66.666%;
 }
 
 .feature-img  {
+  display: block;
   width: 100%;
 
   background-color: #ffc4b0;
@@ -271,8 +278,8 @@ img {
 .offers {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 35px 0 60px;
-  /*min-height: 330px;*/
+  padding: 30px 0 60px;
+  min-height: 330px;
 }
 
 .offers-item {
@@ -293,21 +300,21 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 auto;
-  margin-bottom: 33px;
+  margin-bottom: 25px;
 
   background-repeat: no-repeat;
 }
 
 .offers-item-house h3::before {
   width: 75px;
-  height: 72px;
+  height: 76px;
 
   background-image: url("../img/icon-1.svg");
 }
 
 .offers-item-food h3::before {
   width: 74px;
-  height: 70px;
+  height: 76px;
 
   background-image: url("../img/icon-3.svg");
 }
@@ -334,7 +341,11 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 33%;
-  padding: 50px 60px;
+  padding: 25px 60px 46px;
+}
+
+.other-feature-item h3 {
+  padding: 0 60px;
 }
 
 .booking-search {
@@ -351,7 +362,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 290px;
+  min-height: 292px;
 }
 
 .booking-search h2 {
@@ -653,7 +664,7 @@ img {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 30px 6% 5px 6%;
+  padding: 30px 6% 3px 6%;
 }
 
 .search-options-wrapper {
@@ -666,7 +677,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 50%;
+  width: 48%;
 }
 
 .search-form-item {
@@ -966,12 +977,14 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+
+  width: 35px;
 }
 
 .sorter-switch {
   width: 11px;
   height: 10px;
-  padding-right: 20px;
+  padding-right: 23px;
 }
 
 .sorter-switch path {
@@ -1170,7 +1183,7 @@ img {
 .main-footer {
   position: absolute;
 
-  bottom: -5px;
+  bottom: 0;
   right: 0;
   left: 0;
 
@@ -1184,7 +1197,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 35px 0 35px 0;
+  padding: 37px 0 35px 0;
   width: 100%;
 
   background-color: rgba(255, 255, 255, 0.9);
@@ -1192,6 +1205,7 @@ img {
 
 .inner-footer {
   position: static;
+  padding: 25px 0 35px 0;
 }
 
 .visitsedona {
