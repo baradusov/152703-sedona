@@ -142,7 +142,7 @@ img {
   width: 138px;
   height: 70px;
   margin: auto;
-  z-index: 1;
+  z-index: 999;
 }
 
 /* INDEX STYLING */
@@ -194,6 +194,8 @@ img {
 }
 
 .feature-item {
+  position: relative;
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -349,6 +351,9 @@ img {
 }
 
 .booking-search {
+  position: relative;
+  z-index: 3;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -363,6 +368,8 @@ img {
       -ms-flex-align: center;
           align-items: center;
   min-height: 292px;
+
+  background-color: #ffffff;
 }
 
 .booking-search h2 {
@@ -435,12 +442,20 @@ img {
   -webkit-box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
           box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 
-  transform: translateY(0);
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all 0.6s;
+  -o-transition: all 0.6s;
   transition: all 0.6s;
 }
 
 .modal-hide {
-  transform: translateY(-500px);
+  -webkit-transform: translateY(-500px);
+      -ms-transform: translateY(-500px);
+          transform: translateY(-500px);
+  -webkit-transition: all 0.6s;
+  -o-transition: all 0.6s;
   transition: all 0.6s;
 }
 
@@ -1305,9 +1320,3 @@ img {
 .main-footer-logo:active path {
   fill-opacity: 0.3;
 }
-
-
-
-
-
-/* end */
