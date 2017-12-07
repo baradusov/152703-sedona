@@ -259,9 +259,15 @@ img {
   color: #ffffff;
 }
 
-.feature-item-description h3{
+.feature-item-description h3 {
+  margin-top: 27px;
   padding: 0 45px;
   color: #ffffff;
+  line-height: 21px;
+}
+
+.feature-item-description p {
+  margin-top: 24px;
 }
 
 .feature-item-img {
@@ -285,7 +291,7 @@ img {
 }
 
 .offers-item {
-  width: 33%;
+  width: 33.333%;
   padding: 0 50px;
 }
 
@@ -342,12 +348,17 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 33%;
-  padding: 25px 60px 46px;
+  width: 33.333%;
+  padding: 27px 60px 45px;
 }
 
 .other-feature-item h3 {
   padding: 0 60px;
+  line-height: 21px;
+}
+
+.other-feature-item p {
+  margin-top: 23px;
 }
 
 .booking-search {
@@ -367,7 +378,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 292px;
+  min-height: 291px;
 
   background-color: #ffffff;
 }
@@ -445,18 +456,18 @@ img {
   -webkit-transform: translateY(0);
       -ms-transform: translateY(0);
           transform: translateY(0);
-  -webkit-transition: all 0.6s;
-  -o-transition: all 0.6s;
-  transition: all 0.6s;
+  -webkit-transition: transform 0.6s;
+  -o-transition: transform 0.6s ease;
+  transition: transform 0.6s ease;
 }
 
 .modal-hide {
   -webkit-transform: translateY(-500px);
       -ms-transform: translateY(-500px);
           transform: translateY(-500px);
-  -webkit-transition: all 0.6s;
-  -o-transition: all 0.6s;
-  transition: all 0.6s;
+  -webkit-transition: transform 0.6s;
+  -o-transition: transform 0.6s ease;
+  transition: transform 0.6s ease;
 }
 
 .form-booking-item {
@@ -528,7 +539,7 @@ img {
 }
 
 .booking-item-guests {
-  margin-bottom: 55px;
+  margin-bottom: 53px;
 }
 
 .booking-adults-wrapper,
@@ -689,7 +700,7 @@ img {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 30px 6% 3px 6%;
+  padding: 28px 6% 6px 6%;
 }
 
 .search-options-wrapper {
@@ -714,7 +725,7 @@ img {
 }
 
 .search-form-item legend {
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 
   font-size: 16px;
   font-weight: 700;
@@ -760,8 +771,18 @@ img {
   background-repeat: no-repeat;
 }
 
-.search-form-option input[type="checkbox"]:disabled + label:before {
+.search-form-option input[type="checkbox"] + label:before {
   background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+}
+
+.search-form-option input[type="checkbox"]:disabled:checked + label:before {
+  background-image: url("../img/checkbox-on-d.svg");
+  background-repeat: no-repeat;
+}
+
+.search-form-option input[type="checkbox"]:disabled + label:before {
+  background-image: url("../img/checkbox-off-d.svg");
   background-repeat: no-repeat;
 }
 
@@ -1098,8 +1119,8 @@ img {
 
 .result-item-type,
 .result-item-price {
+  width: 44%;
   margin: 0;
-  margin-right: 40px;
 }
 
 .result-item-title {
@@ -1128,7 +1149,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-right: 5px;
+  margin-right: 6px;
 
   font-weight: 700px;
   color: #ffffff;
